@@ -1,6 +1,6 @@
 fun fibonacci(n:Int) {
-  var a=0;
-    var b = 1;
+  var a=0
+    var b = 1
     println(a)
     var count = 1
     var temp:Int
