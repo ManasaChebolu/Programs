@@ -1,15 +1,14 @@
 
 import java.util.Scanner
 fun main() {
-    val scanner=Scanner(System.`in`)
     val str= readLine()
-    var shift=scanner.nextInt()
-    var res:String=""
+    val shift=Scanner(System.`in`).nextInt()
+    var result=""
     if (str != null) {
         for(j in str) {
-            res+=caesarCipher(j,shift)
+            result+=caesarCipher(j,shift)
         }
-        println(res)
+        println(result)
     }
     else{
         println("String should not be empty")
@@ -17,21 +16,20 @@ fun main() {
 }
 
 fun caesarCipher(j:Char,shift:Int):Char{
-    if (!j.isLetter()) {
-        return j
+   return if (!j.isLetter()) {
+        j
     } else {
-        var d = j
-        var c = shift
-        while (c != 0) {
-            if (d != 'z' && d!='Z') {
-                d += 1
-                c -= 1
+        var character = j
+        var count = shift
+        while (count != 0) {
+            if (character != 'z' && character!='Z') {
+                character += 1
             } else {
-                d = if(j.isLowerCase()) 'a' else 'A'
-                c -= 1
+                character = if(j.isLowerCase()) 'a' else 'A'
             }
+            count -= 1
         }
-        return d
+        character
     }
 }
 
