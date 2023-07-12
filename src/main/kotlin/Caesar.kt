@@ -11,9 +11,8 @@ fun main() {
         }
         println(res)
     }
-    else{
-        println("String should not be empty")
-    }
+    else
+        println("String should not be empty")  
 }
 
 fun caesarCipher(j:Char,shift:Int):Char{
